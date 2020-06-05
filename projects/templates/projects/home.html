@@ -1,0 +1,668 @@
+<!-- Author: Marshall Ma -->
+
+<!DOCTYPE HTML>
+<html>
+{% load staticfiles %}
+<head>
+<title>Marshall Ma</title>
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+ <!-- Custom Theme files -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="keywords" content="Preface Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<!-- webfonts -->
+	<link href='//fonts.googleapis.com/css?family=Asap:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<!-- webfonts -->
+
+</head>
+	<body>
+		<!-- container -->
+			<!-- header -->
+			<div id="home" class="header">
+				<div class="container">
+				<!-- top-hedader -->
+				<div class="top-header">
+					<!-- /logo -->
+					<!--top-nav---->
+					<div class="top-nav">
+					<div class="navigation">
+					<div class="logo">
+						<h1><a href="{% url 'home' %}">
+							<span>Marshall Ma </span>
+						</a></h1>
+					</div>
+					<div class="navigation-right">
+						<span class="menu"><img src="{% static 'images/menu.png' %}" alt=" " /></span>
+						<nav class="link-effect-3" id="link-effect-3">
+							<ul class="nav1 nav nav-wil">
+								<li class="active"><a data-hover="Home" href="{% url 'home' %}">Home</a></li>
+								<li><a class="scroll" data-hover="Projects" href="#projects" >Projects</a></li>
+								<li><a class="scroll" data-hover="Experience" href="#work">Experience</a></li>
+								<li><a class="scroll" data-hover="Resume" href="{% static 'Marshall_Ma_Resume.pdf' %}">Resume</a></li>
+								<li><a class="scroll" data-hover="Vlog" href="#vlogs">Vlog</a></li>
+								<li><a class="scroll" data-hover="Contact" href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+							
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- /top-hedader -->
+				</div>
+			<div class="banner-info">
+				<div class="col-md-7 header-right">
+					<h1>Hi !</h1>
+					<br />
+					<br />
+					<h6>I am Marshall</h6>
+					<ul class="address">
+						
+						<h5>	
+							<p>
+								I am master student at Carnegie Mellon University. Skilled in web development, Andriod and IOS application, search engine, machine learning as well as financial engineering. Actively seeking a full-time job of software engineer.
+							</p>
+							
+							<p>
+								I love basketball, badminton, guitar, popping dance and travel. I have a bilibili and a youtube channel to record my life.
+							</p>
+
+						</h5>
+						
+					</ul>
+				</div>
+				<div class="col-md-5 header-left">
+					<img src="{% static 'images/img1.jpg' %}" alt="">
+				</div>
+				<div class="clearfix"> </div>
+						
+		      </div>
+			</div>
+		</div>
+	</div>
+	
+			<!-- projects -->
+			<div id="projects" class="projects">
+
+				
+
+				<div class="container">
+					<div class="project-head one text-center ">
+						<h4>WHAT I LEARNED</h4>
+						<h3>MY <span>PROJECTS</span></h3>
+						<span class="border two"></span>
+					</div>
+
+					<br />
+					<br />
+
+					<div class="row">
+        			{% for project in projects.all %}
+        			<div class="col-md-4">
+          				<div class="card mb-4 shadow-sm">
+            				<img class="card-img-top" src="{{ project.image.url }}" height=230/>
+            				<div class="card-body">
+              					<p class="card-text">{{ project.title }}</p>
+              					<div class="d-flex justify-content-between align-items-center"></div>
+              					<div class="btn-group">
+                  					<button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                				</div>
+                				<small class="text-muted">Carnegie Mellon University</small>
+            				</div>
+          				</div>
+        			</div>
+        
+        			{% endfor %}
+      				</div>
+
+
+				</div>
+			</div>
+			<!-- projects -->
+
+
+
+
+			<!--work-experience-->
+	<div id="work" class="work">
+		<div class="container">
+			<div class="project-head text-center">
+						<h4>WHAT I DID</h4>
+						<h3>MY <span>EXPERIENCE</span></h3>
+						<span class="border one"></span>
+					</div>
+
+<!-- try -->
+
+<div class="newtimeline">
+  
+  <h3 class="newtimeline__item newtimeline__item--year">2014</h3>
+  
+  <div class="newtimeline__item">
+    <h4 class="newtimeline__title">Graduated from
+    	<a data-hover="Beijing 101 Middle School" href="https://en.wikipedia.org/wiki/Beijing_101_Middle_School">Beijing 101 Middle School</a></h4>
+    <p class="newtimeline__blurb">On behalf of my school's delegation, I visited the United States and Hong Kong (China). I realized my passion for cultural exchange as well as exploring a new environment.  </p>
+  </div>
+  
+  <h2 class="newtimeline__item newtimeline__item--year">2015</h2>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Entered
+  	<a data-hover="Beijing 101 Middle School" href="https://en.wikipedia.org/wiki/Beijing_101_Middle_School">National Chiao Tung University</a></h4>
+    <p class="newtimeline__blurb">I chose Information Management and Finance as my major. I believe it is a unique major all over the world, which train students to master knowledge of both technology and finance. I also joined the basketball team of my department and NCTU pop dance club, starting my exciting college life.</p>
+  </div>
+  
+  <h2 class="newtimeline__item newtimeline__item--year">2016</h2>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Joined
+  		<a data-hover="NCTU Student Union" href="https://www.facebook.com/NCTUStudentUnion/">NCTU Student Union</a></h4>
+    <p class="newtimeline__blurb">I worked at the department of Public Relations first and then became the department head. I organized several big activities with over 10000 participants. Under my lead, the department developed close relations with companies and raised over 200,000 TWD.</p>
+  </div>
+  
+
+  <h2 class="newtimeline__item newtimeline__item--year">2017</h2>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Summer Internship at
+  		<a data-hover="AsiaInfo" href="https://www.asiainfo.com/en_us/index.html">AsiaInfo</a></h4>
+    <p class="newtimeline__blurb">As a software enginner, I tested Data Asset Cloud Map and Visual Development Tools and identified over 20 functional issues.</p>
+  </div>
+  
+  <h2 class="newtimeline__item newtimeline__item--year">2018</h2>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Summer Internship at
+  		<a data-hover="Deloitte Consulting" href="https://www2.deloitte.com/global/en/services/consulting-deloitte.html">Deloitte Consulting</a></h4>
+    <p class="newtimeline__blurb">I led the team to finish the digital transformation report of gold jewelry retail industry. I learned how to collect and analyze data for a specific industry. </p>
+  </div>
+  
+  <h2 class="newtimeline__item newtimeline__item--year">2019</h2>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Exchanged at
+  		<a data-hover="National University of Singapore" href="http://www.nus.edu.sg/">National University of Singapore</a></h4>
+    <p class="newtimeline__blurb">I experienced the different Southeast Asia culture and I love it! I made friends with other exchange students from different countries and traveled to Malaysia, Thailand, Vietnam and Cambodia. That's when I started my youtube channel to record my life!</p>
+  </div>
+  
+  <div class="newtimeline__item">
+    <h3 class="newtimeline__title">Graduated from NCTU</h3>
+    <p class="newtimeline__blurb">My GPA was 3.9 / 4.0 and ranked the second at my department. I won the Academic Achievement Awards in NCTU several times. Due to my excellent grade, I was invited to join the Beta Gamma Sigma Honorary Business School Society, which was seen as the dean's list of my college.</p>
+  </div>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Entered
+  		<a data-hover="Carnegie Mellon University" href="https://www.cmu.edu/">Carnegie Mellon University</a></h4>
+    <p class="newtimeline__blurb">I was admitted to the Master of Information System Management program and started to advance my technology skills. I learned about OOP, database, distributed system, search engine and NoSQL. </p>
+  </div>
+  
+  <h2 class="newtimeline__item newtimeline__item--year">2020</h2>
+  
+  <div class="newtimeline__item">
+  	<h4 class="newtimeline__title">Summer Internship at
+  		<a data-hover="BizCatcher International" href="https://www.bizcatcher-intl.com/">BizCatcher International</a></h4>
+    <p class="newtimeline__blurb">detail</p>
+  </div>
+  
+  
+  
+</div>
+
+
+<!-- try -->
+
+					<!-- <div class="time-main w3l-agile">
+							<div class="col-md-6 year-info">
+							   <ul class="year">
+								   <li>2016</li>
+								   <li>2015</li>
+								   <li>2014</li>
+								   <li>2013</li>
+								   <li>2012</li>
+								   <li>2011</li>
+								   <div class="clearfix"></div>
+								</ul>
+							</div> 
+					                        <ul class="col-md-6 timeline">
+																<li>
+																  <div class="timeline-badge info"><i class="glyphicon glyphicon-briefcase"></i></div>
+																  <div class="timeline-panel">
+																	<div class="timeline-heading">
+																	  <h4 class="timeline-title">COMPANY NAME</h4>
+																	</div>
+																	<div class="timeline-body">
+																	  <p>Lorem ipsum dolor sit amet.Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus </p>
+																	</div>
+																  </div>
+																</li>
+																
+																<li>
+																  <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+																  <div class="timeline-panel">
+																	<div class="timeline-heading">
+																	  <h4 class="timeline-title">COMPANY NAME</h4>
+																	</div>
+																	<div class="timeline-body">
+																	  <p>Lorem ipsum dolor sit amet.Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus </p>
+																	</div>
+																  </div>
+																</li>
+																
+																
+																
+																<li>
+																  <div class="timeline-badge danger"><i class="glyphicon glyphicon-briefcase"></i></div>
+																  <div class="timeline-panel">
+																	<div class="timeline-heading">
+																	  <h4 class="timeline-title">COMPANY NAME</h4>
+																	</div>
+																	<div class="timeline-body">
+																	  <p>Lorem ipsum dolor sit amet.Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus </p>
+																	</div>
+																  </div>
+																</li>
+																
+																<li>
+																  <div class="timeline-badge success"><i class="glyphicon glyphicon-briefcase"></i></div>
+																  <div class="timeline-panel">
+																	<div class="timeline-heading">
+																	  <h4 class="timeline-title">COMPANY NAME</h4>
+																	</div>
+																	<div class="timeline-body">
+																	  <p>Lorem ipsum dolor sit amet.Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus </p>
+																	</div>
+																  </div>
+																</li>
+																<li>
+																  <div class="timeline-badge pass"><i class="glyphicon glyphicon-briefcase"></i></div>
+																  <div class="timeline-panel">
+																	<div class="timeline-heading">
+																	  <h4 class="timeline-title">COMPANY NAME</h4>
+																	</div>
+																	<div class="timeline-body">
+																	  <p>Lorem ipsum dolor sit amet.Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus </p>
+																	</div>
+																  </div>
+																</li>
+															</ul>
+								<div class="clearfix"></div>
+								</div> -->
+						</div>
+				</div>
+	<!--//work-experience-->
+
+    <!-- top-grids -->
+				<div class="vlog" id="vlogs">
+					<div class="container">
+						<div class="project-head text-center vlog-title">
+						<h4>VLOGS</h4>
+						<h3>MY <span>VLOGS</span></h3>
+						<span class="border one"></span>
+					</div>
+					   <div class="news-grid w3l-agile">
+					    <div class="col-md-6 news-img">
+						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="images/b1.jpg" alt=" " class="img-responsive"></a>
+						 
+						</div>
+					    <div class="col-md-6 news-text">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME vlog TITLE</a></h3>
+							<ul class="news">
+								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
+								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
+								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
+								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
+							</ul>
+							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+							<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read More</a>
+					
+						</div>
+		
+						<div class="clearfix"></div>
+					 </div>
+					  <div class="news-grid">
+
+					    <div class="col-md-6 news-text two">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME vlog TITLE</a></h3>
+							<ul class="news">
+								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
+								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
+								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
+								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
+							</ul>
+							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+								<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read More</a>
+					
+						</div>
+						<div class="col-md-6 news-img two">
+						   <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="images/b2.jpg" alt=" " class="img-responsive"></a>
+						 
+						</div>
+						<div class="clearfix"></div>
+					 </div>
+					  <div class="news-grid">
+					    <div class="col-md-6 news-img">
+						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="images/b3.jpg" alt=" " class="img-responsive"></a>
+						 
+						</div>
+					    <div class="col-md-6 news-text">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME vlog TITLE</a></h3>
+							<ul class="news">
+								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
+								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
+								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
+								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
+							</ul>
+							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+							<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read More</a>
+					
+						</div>
+		
+						<div class="clearfix"></div>
+					 </div>
+					</div>
+				</div>
+				<!-- top-grids -->
+	<!-- /vlog-pop-->
+			<div class="modal ab fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog about" role="document">
+					<div class="modal-content about">
+						<div class="modal-header">
+							<button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body about">
+								<div class="about">
+									
+									  <div class="about-inner">
+									   
+									      <img src="images/b3.jpg" alt="about"/>
+										     <h4 class="tittle">A Fews words about us</h4>
+										   <p>Lorem ipsum dolor sit amet Integer gravida,Lorem ipsum dolor sit amet Integer gravida velit,Ming sits in the corner the whole day. She's into crochet. quis dolor tristiqumsan.Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. velit quis dolor tristiqumsan.</p>
+										    <p>Lorem ipsum dolor sit amet. Integer gravida velit quis dolor tristiqumsan.anteposuerit litterarum formas humanitatis per seacula amet Integer gravida velit. </p>
+									  </div>
+												
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //vlog-pop-->
+
+			<!-- /header -->
+<div class="footer" id="contact">
+	<div class="container">
+	<div class="project-head one text-center">
+						<h4>CONTACT ME</h4>
+						<h3>GET <span>IN TOUCH WITH ME</span></h3>
+						<span class="border two"></span>
+					</div>
+		<!-- <div class="mail_us">
+			<div class="col-md-6 mail_left">
+				<div class="contact-grid1-left">
+					<div class="contact-grid1-left1">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						<h4>Contact By Email</h4>
+						<ul>
+							<li>Mail1: <a href="mailto:info@example.com">info@example1.com</a></li>
+							<li>Mail2: <a href="mailto:info@example.com">info@example2.com</a></li>
+						</ul>
+					</div>
+				</div>
+					<div class="contact-grid1-left">
+						<div class="contact-grid1-left1">
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+							<h4>Contact By Phone</h4>
+							<ul>
+								<li>Phone: +0000 123 312</li>
+								<li>Fax: +123 312</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contact-grid1-left">
+						<div class="contact-grid1-left1">
+							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+							<h4>Looking For Address</h4>
+							<ul>
+								<li>Address: General Pvt 66, Dong Da</li>
+								<li>Hanoi, Vietnam.</li>
+							</ul>
+						</div>
+					</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 mail_right">
+				<form action="#" method="post">
+					<input type="text" name="Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					<input type="text" name="Mobile number" value="Mobile number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
+					<textarea name="Message..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+					<input type="submit" value="Send">
+					
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div> -->
+		<div class="copy_right text-center">
+			<br />
+			<p> © Marshall Ma {% now "Y" %}</p>
+			<br />
+			 <ul class="social-icons two">
+							<li><a href="#"> </a></li>
+							<li><a href="#" class="fb"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+							<li><a href="#" class="dott"> </a></li>
+						</ul>
+		</div>
+	</div>
+</div>
+
+
+			<!-- //footer -->
+		<!-- /container -->
+		<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic9.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic5.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic6.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic10.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic11.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="{% static 'images/pic13.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="{% static 'images/pic14.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+                        <img src="{% static 'images/pic1.jpg' %}" class="img-responsive img-centered" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--start-smooth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+								<!--end-smooth-scrolling-->
+<!-- //for bootstrap working -->
+
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+	
+
+	</body>
+</html>
+
