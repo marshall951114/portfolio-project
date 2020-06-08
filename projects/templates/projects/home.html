@@ -19,6 +19,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 <!-- webfonts -->
 
+<!-- social icons -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 	<body>
 		<!-- container -->
@@ -37,14 +40,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a></h1>
 					</div>
 					<div class="navigation-right">
-						<span class="menu"><img src="{% static 'images/menu.png' %}" alt=" " /></span>
+						<!-- <span class="menu"><img src="{% static 'images/menu.png' %}" alt=" " /></span> -->
 						<nav class="link-effect-3" id="link-effect-3">
 							<ul class="nav1 nav nav-wil">
 								<li class="active"><a data-hover="Home" href="{% url 'home' %}">Home</a></li>
 								<li><a class="scroll" data-hover="Projects" href="#projects" >Projects</a></li>
 								<li><a class="scroll" data-hover="Experience" href="#work">Experience</a></li>
 								<li><a class="scroll" data-hover="Resume" href="{% static 'Marshall_Ma_Resume.pdf' %}">Resume</a></li>
-								<li><a class="scroll" data-hover="Vlog" href="#vlogs">Vlog</a></li>
+								<li><a class="scroll" data-hover="Vlogs" href="#vlogs">Vlogs</a></li>
 								<li><a class="scroll" data-hover="Contact" href="#contact">Contact</a></li>
 							</ul>
 						</nav>
@@ -88,8 +91,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- projects -->
 			<div id="projects" class="projects">
 
-				
-
 				<div class="container">
 					<div class="project-head one text-center ">
 						<h4>WHAT I LEARNED</h4>
@@ -104,14 +105,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         			{% for project in projects.all %}
         			<div class="col-md-4">
           				<div class="card mb-4 shadow-sm">
-            				<img class="card-img-top" src="{{ project.image.url }}" height=230/>
+            				<img class="card-img-top img-fluid" src="{{ project.image.url }}"/>
             				<div class="card-body">
-              					<p class="card-text">{{ project.title }}</p>
-              					<div class="d-flex justify-content-between align-items-center"></div>
-              					<div class="btn-group">
+              					<p class="card-text text-center">
+              						{{ project.title }}
+              					</p>
+              					<p class="card-text description">
+              						{{ project.body | linebreaks}}
+              					</p>
+              					<!-- <div class="d-flex justify-content-between align-items-center"></div> -->
+              					<!-- <div class="btn-group">
                   					<button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
                 				</div>
-                				<small class="text-muted">Carnegie Mellon University</small>
+                				<small class="text-muted text-right">Carnegie Mellon University</small> -->
             				</div>
           				</div>
         			</div>
@@ -305,20 +311,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					   <div class="news-grid w3l-agile">
 					    <div class="col-md-6 news-img">
-						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="images/b1.jpg" alt=" " class="img-responsive"></a>
+						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="{% static 'images/lasvegas1.jpg' %}" alt=" " height=344></a>
 						 
 						</div>
-					    <div class="col-md-6 news-text">
-						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME vlog TITLE</a></h3>
-							<ul class="news">
+					    <div class="col-md-6 news-text" height=100>
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">Las Vegas 🇺🇸</a></h3>
+							<!-- <ul class="news">
 								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
 								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
 								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
 								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
-							</ul>
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-							<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read More</a>
-					
+							</ul> -->
+							<p>
+								This is my first road trip in America
+								<br>
+								We were very lucky that we made it before the ourbreak of Covid-19
+								<br>
+								Our route: Grand Canyon → Horseshoe Bay → Antelope Valley → Bryce Canyon National Park
+								<br>
+								The views were amazing !!!
+							</p>
+
+							<a href="https://youtu.be/ta4jXpJjTTg" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Watch Now</a>
+							
 						</div>
 		
 						<div class="clearfix"></div>
@@ -326,43 +341,115 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  <div class="news-grid">
 
 					    <div class="col-md-6 news-text two">
-						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME vlog TITLE</a></h3>
-							<ul class="news">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">Thailand 🇹🇭</a></h3>
+							<!-- <ul class="news">
 								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
 								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
 								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
 								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
-							</ul>
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-								<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read More</a>
+							</ul> -->
+							<p>During the recess week of my exchange in NUS, I went to Thailand (Bangkok and Phuket) with my friends from Taiwan. 
+							<br>
+							We went to the Chatuchak Weekend Market, Ratchada Market, Maeklong Railway Market, Damnoen Saduak Floating Market, tried the delicious Thai food and the famous Thai massage
+							<br>
+							We also tried snorkeling and forest zip line, which was a special and impressive experience (the coaches at Hanuman World were so funny)
+							</p>
+								<a href="https://youtu.be/j0aNW_M8KYk" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Watch Now</a>
 					
 						</div>
 						<div class="col-md-6 news-img two">
-						   <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="images/b2.jpg" alt=" " class="img-responsive"></a>
+						   <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="{% static 'images/thailand1.png' %}" alt=" " class="img-responsive"></a>
 						 
 						</div>
 						<div class="clearfix"></div>
 					 </div>
 					  <div class="news-grid">
 					    <div class="col-md-6 news-img">
-						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="images/b3.jpg" alt=" " class="img-responsive"></a>
+						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="{% static 'images/malaysia.jpg' %}" alt=" " class="img-responsive"></a>
 						 
 						</div>
 					    <div class="col-md-6 news-text">
-						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">HERE GOES AN AWESOME vlog TITLE</a></h3>
-							<ul class="news">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">Malaysia 🇲🇾</a></h3>
+							<!-- <ul class="news">
 								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
 								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
 								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
 								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
-							</ul>
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-							<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Read More</a>
+							</ul> -->
+							<p>
+								During the Chinese new year holiday, I wen to Malaysia ( KL + Melaka ) with my friends Vicky (from New Zealan) and Mean (from Thailand)
+								<br>
+								The food was sooooo good !! The durian ice cream was the most impressive and we even came back to have it again. Most of the food were halal, so it is heaven for a muslim like me
+								<br>
+								The buildings were magnificant and we took many photos
+							</p>
+
+							<a href="https://youtu.be/j9ueWQBh_cs" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Watch Now</a>
 					
 						</div>
 		
 						<div class="clearfix"></div>
 					 </div>
+
+
+					 <div class="news-grid">
+
+					    <div class="col-md-6 news-text two">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">Cambodia 🇰🇭</a></h3>
+							<!-- <ul class="news">
+								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
+								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
+								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
+								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
+							</ul> -->
+							<p>
+								Visited: KABBAS Restaurant, CHHMA CATFE(a cat cafe), PHNOM PENH NIGHT MARKET, Tuol Sleng Genocide Museum, Angkor Wat, Khmer Kitchen restaurant, BUGS CAFE and The Red Piano
+								<br>
+								I tried the traditional Cambodian food, as well as the bugs cuisine for the first time. I also found the place where Tony Leung whispers at the end of the movie <i>In the Mood for Love </i>
+								<br>
+
+
+							</p>
+								<a href="https://youtu.be/v6wSfPg7ofk" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Watch Now</a>
+					
+						</div>
+						<div class="col-md-6 news-img two">
+						   <a href="https://youtu.be/v6wSfPg7ofk" data-toggle="modal" data-target="#myModal1"> <img src="{% static 'images/cambodia1.jpg' %}" alt=" " height=372></a>
+						 
+						</div>
+						<div class="clearfix"></div>
+					 </div>
+
+
+					 <div class="news-grid">
+					    <div class="col-md-6 news-img">
+						  <a href="#" data-toggle="modal" data-target="#myModal1"> <img src="{% static 'images/guitar.png' %}" alt=" " height=345></a>
+						 
+						</div>
+					    <div class="col-md-6 news-text">
+						   <h3> <a href="#" data-toggle="modal" data-target="#myModal1">Playing Guitar 🎸</a></h3>
+							<!-- <ul class="news">
+								<li><i class="glyphicon glyphicon-user"></i> <a href="#">Admin</a></li>
+								<li><i class="glyphicon glyphicon-comment"></i> <a href="#">2 Comments</a></li>
+								<li><i class="glyphicon glyphicon-heart"></i> <a href="#">50 Likes</a></li>
+								<li><i class="glyphicon glyphicon-tags"></i> <a href="#">3 Tags</a></li>
+							</ul> -->
+							<p>
+								I covered the songs of Joker Xue - one of my favorite singers, using only 6 simple chords
+								<br> 
+								Order: Talent, Just Right, What Else Do You Want Me To Do, Actor, Ambiguous Love, Actually, Miles Around, It's Raining, Gentleman
+								<br>
+								<br>
+							</p>
+
+							<a href="https://youtu.be/aBEFecIG2-Y" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">Watch Now</a>
+					
+						</div>
+		
+						<div class="clearfix"></div>
+					 </div>
+
+
 					</div>
 				</div>
 				<!-- top-grids -->
@@ -396,6 +483,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 	<div class="project-head one text-center">
 						<h4>CONTACT ME</h4>
+						<br />
+						<br />
 						<h3>GET <span>IN TOUCH WITH ME</span></h3>
 						<span class="border two"></span>
 					</div>
@@ -445,19 +534,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"></div>
 		</div> -->
-		<div class="copy_right text-center">
+		
 			<br />
-			<p> © Marshall Ma {% now "Y" %}</p>
 			<br />
-			 <ul class="social-icons two">
-							<li><a href="#"> </a></li>
-							<li><a href="#" class="fb"> </a></li>
-							<li><a href="#" class="in"> </a></li>
-							<li><a href="#" class="dott"> </a></li>
-						</ul>
-		</div>
+			<br />
+			<div class="copy_right_text social-menu">
+  				<ul>
+   					<li><a href="https://www.facebook.com/mashuai951114"><i class="fa fa-facebook"></i></a></li>
+    				<li><a href="https://www.instagram.com/marshall951114"><i class="fa fa-instagram"></i></a></li>
+    				<li><a href="mailto:mashuai951114@gmail.com"><i class="fa fa-google"></i></a></li>
+    				<li><a href="https://www.youtube.com/channel/UCDmxyXo5R4tLTqFPnS0APOw?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
+    				<li><a href="https://www.linkedin.com/in/cmu-marshall-ma"><i class="fa fa-linkedin"></i></a></li>
+  				</ul>
+			</div>
+			
+
+			<br />
+			<br />
+			<br />
+	<div class="copy_right_text text-center"> © Marshall Ma {% now "Y" %}</div>
 	</div>
+
+	
 </div>
+
+
+
 
 
 			<!-- //footer -->
